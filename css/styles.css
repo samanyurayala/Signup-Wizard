@@ -1,0 +1,37 @@
+:root {
+    --color-primary: #000;
+    --color-background: #e6ddd1;
+}
+
+body {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    background: var(--color-background);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.phone_number_input, .select {
+    display: flex;
+    justify-content: center;
+}
+
+#value {
+    accent-color: var(--color-primary);
+    width: 90%;
+    height: 10px;
+}
+
+#text {
+    text-align: center;
+}
