@@ -1,9 +1,4 @@
-let value = document.getElementById("value");
-let text = document.getElementById("text");
-let spin = document.getElementById("spin");
-let date = document.getElementById("date");
-let email = document.getElementById("email");
-let submit = document.getElementById("submit");
+
 let letter_selector_first = `<select name="letters" class="letter_first">
         <option value=""></option>
         <option value="A">A</option>
@@ -64,34 +59,15 @@ let letter_selector = `<select name="letters" id="letter">
       </select>`
 let letter_first = document.querySelectorAll(".letter_first");
 let letter = document.querySelectorAll(".letter");
+let submit = document.getElementById("submit");
+let requiredFirstName = document.getElementById("required_first_name");
+let requiredLastName = document.getElementById("required_last_name");
 
 letter_first.forEach(
     (element) => { element.innerHTML = letter_selector_first; })
 letter.forEach((element) => { element.innerHTML = letter_selector; });
 
-value.addEventListener("input", function() { text.textContent = value.value; });
-spin.addEventListener("click", function() {
-    let month_value = Math.floor(Math.random() * 12) + 1;
-    let day_value = Math.floor(Math.random() * 31) + 1;
-    let year_value = Math.floor(Math.random() * 56) + 1970;
-    date.textContent = month_value + " / " + day_value + " / " + year_value;
-});
-email.addEventListener("keypress", function(event) {
-    event.preventDefault();
-    const chars =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
-    const randIndex = Math.floor(Math.random() * chars.length);
-    const randChar = chars.charAt(randIndex);
-    email.value += randChar;
-});
-submit.addEventListener("mouseover", function() {
-    const vw = window.innerWidth;
-    const vh = window.innerHeight;
-    const boxW = submit.offsetWidth;
-    const boxH = submit.offsetHeight;
-    const randX = Math.floor(Math.random() * (vw - boxW));
-    const randY = Math.floor(Math.random() * (vh - boxH));
-    submit.style.position = "absolute";
-    submit.style.left = randX + "px";
-    submit.style.top = randY + "px";
-});
+submit.addEventListener("click", function() {
+    if (requiredFirstName.value && requiredLastName.value)
+        window.location.href = "second.html";
+})

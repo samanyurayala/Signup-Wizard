@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Easy Signup™</title>
+  </head>
+  <body>
+    <h1>Easy Signup™</h1>
+    <h2>The best signup wizard</h2>
+    <section>
+      <div class="phone_birthday" data-aos="slide-left">
+        <div class="phone_number">
+          <h3>Phone Number</h3>
+          <div class="phone_number_input">
+            <input
+              type="range"
+              min="0"
+              max="99999999999"
+              value="0"
+              id="value"
+            />
+          </div>
+          <div id="text">0</div>
+        </div>
+        <div class="birthday">
+          <h3>Birthday</h3>
+          <div class="date">
+            <button id="spin"><div id="date">1 / 1 / 1970</div></button>
+          </div>
+        </div>
+      </div>
+
+      <button id="submit" type="submit">Next</button>
+    </section>
+    <script src="second.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

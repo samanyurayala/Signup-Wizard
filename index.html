@@ -11,73 +11,69 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Easy Signup™</title>
   </head>
   <body>
     <h1>Easy Signup™</h1>
     <h2>The best signup wizard</h2>
-    <div class="first_name">
-      <h3>First Name</h3>
-      <div class="select">
-        <select name="letters" class="letter_first"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
+    <section>
+      <div class="names" data-aos="slide-left">
+        <div class="first_name">
+          <h3>First Name</h3>
+          <div class="select">
+            <select
+              name="letters"
+              class="letter_first"
+              id="required_first_name"
+            ></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+          </div>
+        </div>
+        <div class="last_name">
+          <h3>Last Name</h3>
+          <div class="select">
+            <select
+              name="letters"
+              class="letter_first"
+              id="required_last_name"
+            ></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+            <select name="letters" class="letter"></select>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="last_name">
-      <h3>Last Name</h3>
-      <div class="select">
-        <select name="letters" class="letter_first"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-        <select name="letters" class="letter"></select>
-      </div>
-    </div>
-    <div class="phone_number">
-      <h3>Phone Number</h3>
-      <div class="phone_number_input">
-        <input type="range" min="0" max="99999999999" value="0" id="value" />
-      </div>
-      <div id="text">0</div>
-    </div>
-    <div class="birthday">
-      <h3>Birthday</h3>
-      <div class="date">
-        <button id="spin"><div id="date">1 / 1 / 1970</div></button>
-      </div>
-    </div>
-    <div class="email">
-      <h3>Enter your email</h3>
-      <div class="email_text">
-        <input type="email" id="email" placeholder="" />
-      </div>
-    </div>
-    <section class="submit">
-      <button id="submit" type="submit">Submit</button>
+      <button id="submit" type="submit">Next</button>
     </section>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
